@@ -48,7 +48,7 @@ const HeroSection = () => {
                 <div className='bar'></div>
                 <img src={arrowRight} alt="" />
               </div>
-              <p className='count'>1/10</p>
+              <p className='count'>01/10</p>
             </div>
 
             <div className='dialer'>

@@ -192,7 +192,8 @@
 
       .title{
         flex-grow: 0;
-        margin: 0
+        margin: 0;
+        @include h5(#fff, 600);
       }
 
       .ipBox{
