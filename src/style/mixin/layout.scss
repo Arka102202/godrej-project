@@ -2,19 +2,21 @@
 /// ///////////////////// flex /////////////////////////////////
 /// //////////////////////////////////////////////////////////////
 // both common
-@mixin flex-cc($direction: row){
+@mixin flex-cc($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: center;
   align-items: center;
 }
-@mixin flex-ss($direction: row){
+
+@mixin flex-ss($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: flex-start;
   align-items: flex-start;
 }
-@mixin flex-ee($direction: row){
+
+@mixin flex-ee($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: flex-end;
@@ -22,13 +24,14 @@
 }
 
 // start-center
-@mixin flex-sc($direction: row){
+@mixin flex-sc($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: flex-start;
   align-items: center;
 }
-@mixin flex-cs($direction: row){
+
+@mixin flex-cs($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: center;
@@ -36,13 +39,28 @@
 }
 
 // start-end
-@mixin flex-es($direction: row){
+@mixin flex-ec($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-ce($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@mixin flex-es($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: flex-end;
   align-items: flex-start;
 }
-@mixin flex-se($direction: row){
+
+@mixin flex-se($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: flex-start;
@@ -50,25 +68,28 @@
 }
 
 //space_between
-@mixin flex-sbc($direction: row){
+@mixin flex-sbc($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: space-between;
   align-items: center;
 }
-@mixin flex-sbs($direction: row){
+
+@mixin flex-sbs($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: space-between;
   align-items: flex-start;
 }
-@mixin flex-sbe($direction: row){
+
+@mixin flex-sbe($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: space-between;
   align-items: flex-end;
 }
-@mixin flex-ses($direction: row){
+
+@mixin flex-ses($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: space-evenly;
@@ -76,20 +97,22 @@
 }
 
 // space_around
-@mixin flex-sas($direction: row){
+@mixin flex-sas($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: space-around;
   align-items: flex-start;
 }
+
 //space_around
-@mixin flex-sac($direction: row){
+@mixin flex-sac($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: space-around;
   align-items: center;
 }
-@mixin flex-sas($direction: row){
+
+@mixin flex-sas($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: space-around;
@@ -100,15 +123,15 @@
 /// ///////////////////// Grid /////////////////////////////////
 /// //////////////////////////////////////////////////////////////
 
-@mixin grid-auto-fit-col($minWidth){
+@mixin grid-auto-fit-col($minWidth) {
   grid-template-columns: repeat(auto-fit, minmax($minWidth, 1fr));
 }
 
-@mixin grid-n-eql-col($n){
+@mixin grid-n-eql-col($n) {
   grid-template-columns: repeat($n, 1fr);
 }
 
-@mixin grid-n-fixed-col($n){
+@mixin grid-n-fixed-col($n) {
   grid-template-columns: repeat($n, (100% / $n));
 }
 
@@ -121,23 +144,27 @@
 //   }
 @mixin grid-n-col($columns) {
   $columnsString: '';
+
   @each $col in $columns {
     $columnsString: #{$columnsString} #{$col};
   }
+
   grid-template-columns: $columnsString;
 }
 
-@mixin grid-sc{
+@mixin grid-sc {
   display: grid;
   justify-items: start;
   align-items: center;
 }
-@mixin grid-cc{
+
+@mixin grid-cc {
   display: grid;
   justify-items: center;
   align-items: center;
 }
-@mixin grid-ss{
+
+@mixin grid-ss {
   display: grid;
   justify-items: start;
   align-items: start;

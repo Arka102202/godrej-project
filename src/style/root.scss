@@ -67,9 +67,10 @@ button:disabled {
 
 .btn,
 .btn-extra-info {
-  @include btn(transparent, #a2a2a2);
-  border: 1px solid var(--grey-0);
+  @include btn(#fff, var(--grey-6));
+  font-weight: 600;
   transition: all .3s;
+  padding: 1rem 2rem;
 
   &:hover{
     background-color: #4d4d4d;

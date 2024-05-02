@@ -1,0 +1,225 @@
+.hero-sec {
+  @include bodyText;
+  width: 100%;
+  // @include flex-cc(column);
+
+  header {
+    @include flex-sbc;
+    width: var(--main-width);
+    padding: 2rem 0;
+    margin: 0 auto;
+
+    .header-name {
+      @include h5(var(--grey-6), 800);
+      @include flex-ce(column);
+
+      p:last-child {
+        @include bodyText(var(--grey-6), 800);
+      }
+    }
+
+    .header-imgs {
+      @include flex-cc;
+      gap: 1rem;
+      width: 12%;
+
+      .menu {
+        width: 130%;
+      }
+    }
+  }
+
+  &-main {
+    width: 100%;
+    @include flex-cc(column);
+    margin-top: 8rem;
+
+    margin-bottom: 10rem;
+
+    .part--1 {
+      position: relative;
+      width: 100%;
+      height: 50rem;
+      @include flex-cc(column);
+      overflow: hidden;
+
+      .btm-lyr,
+      .mid-lyr,
+      .top-lyr {
+        position: absolute;
+      }
+
+      .btm-lyr,
+      .top-lyr.btm-line {
+        @include font-style(30rem, 700);
+        text-align: center;
+        bottom: -5% !important;
+      }
+
+      .top-lyr.btm-line {
+        -webkit-text-stroke: .2rem #fff;
+        color: transparent !important;
+      }
+
+      .top-lyr.top-line{
+        top: 10%;
+        @include h3(#fff, 400);
+        letter-spacing: 1px;
+        font-style: italic;
+        padding: 2rem;
+      }
+
+      .btm-lyr {
+        z-index: 1;
+      }
+
+      .mid-lyr {
+        width: 40%;
+        height: 50rem;
+        @include flex-cc;
+        overflow: hidden;
+        background: url("./assets/skyScrapper.jpg");
+        background-position: 20% 15%;
+        background-size: 120%;
+        background-repeat: no-repeat;
+        z-index: 2;
+      }
+
+      .top-lyr {
+        z-index: 3;
+      }
+
+
+    }
+
+    .part--2{
+      position: relative;
+      width: 100%;
+      height: 58rem;
+      overflow: hidden;
+
+      .left-part, 
+      .right-part{
+        position: absolute;
+        bottom: 0;
+      }
+
+      .left-part{
+        width: 71.4%;
+        height: 60rem;
+        left: 0;
+        background: url("./assets/skyScrapper.jpg");
+        background-position: 0% 30%;
+        background-size: 98%;
+        background-repeat: no-repeat;
+        z-index: 1;
+      }
+
+      .right-part{
+        width: 42%;
+        height: 38rem;
+        right: 0;
+        // position: relative;
+
+        background-color: var(--grey-6);
+        padding: 4rem;
+        padding-right: 15rem;
+        z-index: 2;
+        @include bodyText(#fff);
+        overflow: hidden;
+        @include flex-ss(column);
+        .title{
+          margin: 0;
+          @include h3(#fff, 600);
+          margin-bottom: 2rem;
+          letter-spacing: .2rem;
+        }
+        .body{
+          // text-align: justify;
+          font-size: 1.2rem;
+        }
+
+        .arr-num{
+          @include flex-sbc;
+          margin-top: 5rem;
+
+          .arrows{
+            @include flex-sc;
+            gap: 2rem;
+            width: 30%;
+
+            .left-arrow{
+              opacity: .8;
+            }
+
+            .bar{
+              width: .2rem;
+              height: 5rem;
+              background-color: #fff;
+              opacity: .8;
+            }
+
+          }
+
+          .count{
+            font-size: 1rem;
+          }
+
+        }
+
+        .dialer{
+          bottom: 5%;
+          right: 5%;
+          overflow: hidden;
+          position: absolute;
+
+          width: 5%;
+        }
+
+      }
+
+      
+    }
+
+    .part--3{
+      background-color: var(--grey-0);
+      @include bodyText(#fff);
+      @include flex-sbc;
+      gap: 2rem;
+      width: 100%;
+
+      padding: 1% 5%;
+
+      .title{
+        flex-grow: 0;
+        margin: 0
+      }
+
+      .ipBox{
+        @include flex-ss;
+
+        input{
+          background-color: transparent;
+          margin-left: 1rem;
+          border: none;
+          border-bottom: .1rem solid #fff;
+          outline: none;
+
+          &,
+          &::placeholder{
+            @include bodyText(#fff);
+          }
+        }
+        
+      }
+
+      .document{
+        width: 3%;
+        @include flex-cc;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
