@@ -14,8 +14,9 @@
     }
 
     .sub-heading {
-      @include font-style(1.1rem);
+      @include font-style(1.3rem, 600);
       margin-top: 1rem;
+      // padding-right: rem;
     }
 
 
@@ -142,7 +143,7 @@
 
     .body {
       margin-top: 3rem;
-
+      @include font-style(1.1rem, 600);
       @media (max-width: 47.9em) {
         margin-top: 1.5rem;
       }
