@@ -1,0 +1,40 @@
+.legacy-box {
+  width: 100%;
+  @include grid-cc;
+  @include grid-auto-fit-col(50rem);
+  background-color: var(--grey-6);
+
+  .left {
+    width: 100%;
+    @include flex-cs(column);
+    gap: 2rem;
+    padding: 2rem;
+    padding-left: 20%;
+
+    @media (max-width: 62.5em) {
+      padding: 5% 10%;
+    }
+
+    .heading {
+      @include h3(#fff, 600);
+    }
+
+    .body {
+      @include font-style(1.1rem, 400, #fff);
+    }
+  }
+
+  .right {
+    height: 50rem;
+    width: 100%;
+
+    background: url("./assets/office-building-in-city.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (max-width: 62.5em) {
+      background-position: 0% 60%;
+    }
+  }
+}

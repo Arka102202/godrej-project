@@ -1,0 +1,24 @@
+footer{
+  background-color: black;
+  width: 100%;
+  padding: 1% 5%;
+  @include font-style(1.1rem, 400, var(--grey-0));
+
+  @include flex-sc;
+
+  @media (max-width: 62.5em) {
+    padding: 2.5% 5%;
+  }
+
+  p{
+    border-right: .2rem solid var(--grey-0);
+    padding: 0 2rem;
+
+   
+
+  }
+
+  & p:last-child{
+    border: 0;
+  }
+}
