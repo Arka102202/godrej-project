@@ -19,6 +19,30 @@
 
 @mixin h3($clr: var(--grey-6), $weight: 700) {
   @include font-style(3.2rem, $weight, $clr);
+
+  @media (max-width: 55em) {
+    font-size: 2.8rem;
+  }
+
+  @media (max-width: 47em) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 41em) {
+    font-size: 2.2rem;
+  }
+
+  @media (max-width: 32em) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 25em) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 22em) {
+    font-size: 1.2rem;
+  }
 }
 
 @mixin h4($clr: var(--grey-6), $weight: 600) {

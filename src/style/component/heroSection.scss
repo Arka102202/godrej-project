@@ -1,7 +1,6 @@
 .hero-sec {
   @include bodyText;
   width: 100%;
-  // @include flex-cc(column);
 
   header {
     @include flex-sbc;
@@ -21,10 +20,26 @@
     .header-imgs {
       @include flex-cc;
       gap: 1rem;
-      width: 12%;
+      width: 13%;
+
+      @media (max-width: 48em) {
+        width: 20%;
+      }
+
+      @media (max-width: 37.5em) {
+        width: 25%;
+      }
+
+      @media (max-width: 30em) {
+        width: 30%;
+      }
+
+      @media (max-width: 25em) {
+        width: 33%;
+      }
 
       .menu {
-        width: 130%;
+        width: 20rem;
       }
     }
   }
@@ -32,7 +47,7 @@
   &-main {
     width: 100%;
     @include flex-cc(column);
-    margin-top: 8rem;
+    margin-top: 5rem;
 
     margin-bottom: 10rem;
 
@@ -42,6 +57,22 @@
       height: 50rem;
       @include flex-cc(column);
       overflow: hidden;
+
+      @media (max-width: 48em) {
+        height: 48rem;
+      }
+
+      @media (max-width: 41em) {
+        height: 45rem;
+      }
+
+      @media (max-width: 30em) {
+        height: 35rem;
+      }
+
+      @media (max-width: 25em) {
+        height: 30rem;
+      }
 
       .btm-lyr,
       .mid-lyr,
@@ -54,6 +85,34 @@
         @include font-style(30rem, 700);
         text-align: center;
         bottom: -5% !important;
+
+        @media (max-width: 75em) {
+          font-size: 25rem;
+        }
+
+        @media (max-width: 60em) {
+          font-size: 22rem;
+        }
+
+        @media (max-width: 47em) {
+          font-size: 20rem;
+        }
+
+        @media (max-width: 43em) {
+          font-size: 18rem;
+        }
+
+        @media (max-width: 32em) {
+          font-size: 15rem;
+        }
+
+        @media (max-width: 25em) {
+          font-size: 13rem;
+        }
+
+        @media (max-width: 22em) {
+          font-size: 10rem;
+        }
       }
 
       .top-lyr.btm-line {
@@ -61,7 +120,7 @@
         color: transparent !important;
       }
 
-      .top-lyr.top-line{
+      .top-lyr.top-line {
         top: 10%;
         @include h3(#fff, 400);
         letter-spacing: 1px;
@@ -83,6 +142,47 @@
         background-size: 120%;
         background-repeat: no-repeat;
         z-index: 2;
+
+        @media (max-width: 75em) {
+          background-size: 135%;
+          background-position: 50% 15%;
+        }
+
+        @media (max-width: 63em) {
+          background-size: 150%;
+          background-position: 50% 15%;
+        }
+
+        @media (max-width: 53em) {
+          background-size: 170%;
+          background-position: 50% 15%;
+        }
+
+        @media (max-width: 50em) {
+          width: 45%;
+          height: 100%;
+          background-size: 150%;
+          background-position: 50% 0%;
+        }
+
+        @media (max-width: 45em) {
+          width: 48%;
+        }
+
+        @media (max-width: 43em) {
+          background-size: 160%;
+        }
+
+        @media (max-width: 38em) {
+          background-size: 150%;
+          background-position: 50% 5%;
+        }
+
+        @media (max-width: 33em) {
+          width: 50%;
+          background-size: 200%;
+          background-position: 50% 20%;
+        }
       }
 
       .top-lyr {
@@ -92,19 +192,35 @@
 
     }
 
-    .part--2{
+    .part--2 {
       position: relative;
       width: 100%;
       height: 58rem;
       overflow: hidden;
 
-      .left-part, 
-      .right-part{
+      @media (max-width: 50em) {
+        height: 50rem;
+      }
+
+      @media (max-width: 28em) {
+        height: 45rem;
+      }
+
+      @media (max-width: 25em) {
+        height: 40rem;
+      }
+
+      @media (max-width: 22em) {
+        height: 38rem;
+      }
+
+      .left-part,
+      .right-part {
         position: absolute;
         bottom: 0;
       }
 
-      .left-part{
+      .left-part {
         width: 71.4%;
         height: 60rem;
         left: 0;
@@ -113,9 +229,22 @@
         background-size: 98%;
         background-repeat: no-repeat;
         z-index: 1;
+
+        @media (max-width: 50em) {
+          width: 74%;
+          height: 100%;
+        }
+
+        @media (max-width: 45em) {
+          width: 75.5%;
+        }
+
+        @media (max-width: 33em) {
+          width: 76.5%;
+        }
       }
 
-      .right-part{
+      .right-part {
         width: 42%;
         height: 38rem;
         right: 0;
@@ -128,96 +257,178 @@
         @include bodyText(#fff);
         overflow: hidden;
         @include flex-ss(column);
-        .title{
+
+        @media (max-width: 80em) {
+          padding-right: 10rem;
+        }
+
+        @media (max-width: 71em) {
+          width: 45%;
+          padding-right: 8rem;
+        }
+
+        @media (max-width: 62em) {
+          width: 50%;
+          padding-right: 7rem;
+        }
+
+        @media (max-width: 54em) {
+          width: 55%;
+          height: 35rem;
+          padding-right: 5rem;
+        }
+
+        @media (max-width: 42.5em) {
+          width: 60%;
+          padding-right: 2rem;
+        }
+
+        @media (max-width: 29em) {
+          width: 65%;
+          height: 32rem;
+          padding: 3rem;
+        }
+
+        @media (max-width: 22.5em) {
+          width: 80%;
+        }
+
+        .title {
           margin: 0;
           @include h3(#fff, 600);
           margin-bottom: 2rem;
           letter-spacing: .2rem;
+          overflow: hidden;
         }
-        .body{
+
+        .body {
           // text-align: justify;
           font-size: 1.2rem;
+          overflow: hidden;
+          flex-grow: 1;
         }
 
-        .arr-num{
+        .arr-num {
           @include flex-sbc;
           margin-top: 5rem;
+          overflow: hidden;
 
-          .arrows{
+          @media (max-width: 47em) {
+            margin-top: 3rem;
+          }
+
+          @media (max-width: 34.5em) {
+            margin-top: 2rem;
+          }
+
+          @media (max-width: 29em) {
+            margin-top: 1.5rem;
+          }
+
+          @media (max-width: 22.5em) {
+            // margin-top: 5rem;
+          }
+
+          .arrows {
             @include flex-sc;
             gap: 2rem;
             width: 30%;
 
-            .left-arrow{
+            .left-arrow {
               opacity: .8;
             }
 
-            .bar{
+            .bar {
               width: .2rem;
               height: 5rem;
               background-color: #fff;
               opacity: .8;
+
+              @media (max-width: 29em) {
+                height: 3rem;
+              }
+
+              @media (max-width: 22.5em) {
+                // height: 5rem;
+              }
             }
 
           }
 
-          .count{
+          .count {
             font-size: 1rem;
           }
 
         }
 
-        .dialer{
+        .dialer {
           bottom: 5%;
           right: 5%;
           overflow: hidden;
           position: absolute;
 
-          width: 5%;
+          width: 7%;
         }
 
       }
 
-      
+
     }
 
-    .part--3{
+    .part--3 {
       background-color: var(--grey-0);
       @include bodyText(#fff);
       @include flex-sbc;
+      flex-wrap: wrap;
       gap: 2rem;
       width: 100%;
+      position: relative;
 
       padding: 1% 5%;
 
-      .title{
+      .title {
         flex-grow: 0;
         margin: 0;
         @include h5(#fff, 600);
+        margin: auto;
       }
 
-      .ipBox{
-        @include flex-ss;
+      .inputs {
+        @include flex-sbc;
+        gap: 2rem;
+        flex-wrap: wrap;
 
-        input{
-          background-color: transparent;
-          margin-left: 1rem;
-          border: none;
-          border-bottom: .1rem solid #fff;
-          outline: none;
+        .ipBox {
+          @include flex-ss;
+          margin: auto;
+          input {
+            background-color: transparent;
+            margin-left: 1rem;
+            border: none;
+            border-bottom: .1rem solid #fff;
+            outline: none;
 
-          &,
-          &::placeholder{
-            @include bodyText(#fff);
+            &,
+            &::placeholder {
+              @include bodyText(#fff);
+            }
           }
+
         }
-        
       }
 
-      .document{
+      .btn{
+        margin: auto;
+      }
+
+      .document {
         width: 3%;
         @include flex-cc;
-        img{
+        position: absolute;
+        bottom: 25%;
+        right: 1%;
+
+        img {
           width: 100%;
         }
       }

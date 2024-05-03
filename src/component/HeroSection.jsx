@@ -60,17 +60,19 @@ const HeroSection = () => {
         </div>
         <form className='part--3'>
           <p className='title'>ENQUIRY</p>
-          <div className="ipBox">
-            <label htmlFor="name">Name :</label>
-            <input type="text" name="name" id="name" />
-          </div>
-          <div className="ipBox">
-            <label htmlFor="tel">Mobile :</label>
-            <input type="tel" name="tel" id="tel" />
-          </div>
-          <div className="ipBox">
-            <label htmlFor="email">Email :</label>
-            <input type="email" name="email" id="email" />
+          <div className='inputs'>
+            <div className="ipBox">
+              <label htmlFor="name">Name :</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div className="ipBox">
+              <label htmlFor="tel">Mobile :</label>
+              <input type="tel" name="tel" id="tel" />
+            </div>
+            <div className="ipBox">
+              <label htmlFor="email">Email :</label>
+              <input type="email" name="email" id="email" />
+            </div>
           </div>
           <button className='btn'>Submit</button>
           <div className='document'>
