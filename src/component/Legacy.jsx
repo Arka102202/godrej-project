@@ -1,5 +1,4 @@
 import React from 'react';
-import complex from "../assets/office-building-in-city.jpg";
 
 const Legacy = () => {
   return (
